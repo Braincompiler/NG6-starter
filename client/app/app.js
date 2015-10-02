@@ -9,12 +9,12 @@ import AppComponent from './app.component';
 /**
  * @param {$mdTheming} $mdThemingProvider
  */
-let theamingConfig = ($mdThemingProvider) => {
+let themingConfig     = ($mdThemingProvider) => {
     $mdThemingProvider.theme('default')
         .primaryPalette('light-blue')
         .accentPalette('orange');
 };
-theamingConfig.$inject = ['$mdThemingProvider'];
+themingConfig.$inject = ['$mdThemingProvider'];
 
 angular.module('app', [
         ngRouter,
@@ -23,7 +23,7 @@ angular.module('app', [
         Components.name
     ])
 
-    .config(theamingConfig)
+    .config(themingConfig)
 
     .directive('app', AppComponent)
 

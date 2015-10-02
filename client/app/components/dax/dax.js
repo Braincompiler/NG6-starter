@@ -2,10 +2,21 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import daxComponent from './dax.component';
 
-let daxModule = angular.module('dax', [
-  uiRouter
-])
+let routerConfig     = ($stateProvider) => {
+    $stateProvider
+        .state('dax', {
+            url:      '/dax',
+            template: '<dax></dax>'
+        });
+};
+routerConfig.$inject = ['$stateProvider'];
 
-.directive('dax', daxComponent);
+let daxModule = angular.module('dax', [
+        uiRouter
+    ])
+
+    .config(routerConfig)
+
+    .directive('dax', daxComponent);
 
 export default daxModule;

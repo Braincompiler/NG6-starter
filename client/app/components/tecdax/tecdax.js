@@ -2,10 +2,21 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import tecdaxComponent from './tecdax.component';
 
-let tecdaxModule = angular.module('tecdax', [
-  uiRouter
-])
+let routerConfig     = ($stateProvider) => {
+    $stateProvider
+        .state('tecdax', {
+            url:      '/tecdax',
+            template: '<tecdax></tecdax>'
+        });
+};
+routerConfig.$inject = ['$stateProvider'];
 
-.directive('tecdax', tecdaxComponent);
+let tecdaxModule = angular.module('tecdax', [
+        uiRouter
+    ])
+
+    .config(routerConfig)
+
+    .directive('tecdax', tecdaxComponent);
 
 export default tecdaxModule;
