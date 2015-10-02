@@ -8,7 +8,7 @@ let <%= name %>Component = function () {
     scope: {},
     template,
     controller,
-    controllerAs: 'vm',
+    controllerAs: '<%= name %>',
     bindToController: true
   };
 };

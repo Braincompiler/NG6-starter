@@ -1,9 +1,11 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ vm.name }}.html</h1>
-  </div>
-</main>
+<toolbar title="interone example app" sidenav="left"></toolbar>
+
+<div layout="row" flex>
+    <sidenav></sidenav>
+
+    <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+
+        </md-content>
+    </div>
+</div>
