@@ -1,7 +1,7 @@
 import template from './toolbar.html';
 import controller from './toolbar.controller';
 import './toolbar.styl';
-import 'lodash';
+import _ from 'lodash';
 
 let toolbarComponent = function () {
     return {

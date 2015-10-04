@@ -2,7 +2,7 @@
 
 class TecdaxController {
     constructor() {
-        this.name = 'tecdax';
+        this.name = 'TecDAX';
     }
 }
 

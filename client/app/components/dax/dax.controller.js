@@ -2,7 +2,7 @@
 
 class DaxController {
     constructor() {
-        this.name = 'dax';
+        this.name = 'DAX';
     }
 }
 
